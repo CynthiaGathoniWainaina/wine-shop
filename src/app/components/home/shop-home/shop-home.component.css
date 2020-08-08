@@ -18,20 +18,24 @@
 }
 
 .btn-filter{
-  border-color: #212121;
+  border-color: #165751;
   margin: 0 10px 10px 0;
   cursor: pointer;
   font-size: 15px;
+  color: #165751;
+  opacity: 80%;
+
 }
 
 .filter-item{
-  opacity: 70%;
   cursor: pointer;
   font-size: 15px;
+  opacity: 60%;
+
 }
 
 .card img{
-  height: 370px;
+  height: 400px;
   width: 290px;
 }
 
