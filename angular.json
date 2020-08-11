@@ -62,7 +62,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "wine-shop-app:build"
+            "browserTarget": "wine-shop-app:build",
           },
           "configurations": {
             "production": {

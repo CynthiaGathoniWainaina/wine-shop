@@ -1,0 +1,47 @@
+.price-container {
+  background-color: #f9f9f9;
+  padding: 10px 0 5px 10px;
+  margin: 0 0 2em 0;
+  font-size: 20px;
+}
+
+.options-container {
+  margin: 0 0 2em 0;
+}
+
+.description-container {
+  font-family: "Avenir Next";
+  font-size: 15px;
+}
+
+input[type=text] {
+  width: 10%;
+  /*margin: 5px 0 22px 0;*/
+  display: inline-block;
+  border: none;
+  background: #f9f9f9;
+}
+
+.btn-choice {
+  border: solid 1px #212121;
+  border-radius: 0!important;
+  margin-right: 1em;
+  font-size: 15px;
+}
+
+.btn-to-cart {
+  margin-top: 2em;
+  text-align: center;
+  background-color: #f9f9f9;
+  width: 100%;
+  border-radius: 0!important;
+}
+
+.btn-buy-now {
+  margin: 1em 0 2em 0;
+  text-align: center;
+  color: white;
+  background-color: #165751;
+  width: 100%;
+  border-radius: 0!important;
+}

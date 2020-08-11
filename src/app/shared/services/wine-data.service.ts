@@ -1,5 +1,6 @@
+/* tslint:disable:typedef */
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {dev} from '../dev/dev';
 
 @Injectable({
@@ -7,11 +8,14 @@ import {dev} from '../dev/dev';
 })
 export class WineDataService {
 
-  public url = `${dev.connect}wineshop-assets`;
+  public url = `${dev.connect}wineshop-assets/`;
+
+  header = new HttpHeaders().set('Content-Type', `application/json`);
 
   constructor( private http: HttpClient) { }
 
   getWineData(){
-    return this.http.get<any>(this.url + 'wine-shop.json');
+    return this.http.get<any>(this.url + 'wine-shop.json', {headers: this.header});
   }
+
 }

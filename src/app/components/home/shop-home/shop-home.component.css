@@ -12,12 +12,14 @@
 }
 
 .btn-submit {
-  height: 35px;
+  height: 40px;
+  width: 150px;
   background-color: #f9f9f9;
   color: #212121;
+  border-radius: 0!important;
 }
 
-.btn-filter{
+.btn-filter {
   border-color: #165751;
   margin: 0 10px 10px 0;
   cursor: pointer;
@@ -27,15 +29,31 @@
 
 }
 
-.filter-item{
+.filter-item {
   cursor: pointer;
   font-size: 15px;
   opacity: 60%;
 
 }
 
-.card img{
-  height: 400px;
-  width: 290px;
+.card-text {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Avenir Next";
 }
 
+.btn-add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border-color: #165751;
+  border-radius: 0 !important;
+
+}
+
+.btn-add-to-cart:hover{
+  background-color: #165751;
+  color: white;
+  opacity: 90%;
+}

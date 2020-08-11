@@ -7,6 +7,11 @@ import { HomeComponent } from './components/home/home.component';
 import {ShopHomeComponent} from './components/home/shop-home/shop-home.component';
 import {ShopCartComponent} from './components/home/shop-cart/shop-cart.component';
 import {ShopCheckoutComponent} from './components/home/shop-checkout/shop-checkout.component';
+import {ToastrModule} from "ngx-toastr";
+import {HttpClientModule} from "@angular/common/http";
+import { ProductDetailsComponent } from './components/home/product-details/product-details.component';
+import {NgxSpinnerModule} from "ngx-spinner";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -14,11 +19,20 @@ import {ShopCheckoutComponent} from './components/home/shop-checkout/shop-checko
     ShopHomeComponent,
     ShopCartComponent,
     ShopCheckoutComponent,
-    HomeComponent
+    HomeComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgxSpinnerModule,
+    FontAwesomeModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: false,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
