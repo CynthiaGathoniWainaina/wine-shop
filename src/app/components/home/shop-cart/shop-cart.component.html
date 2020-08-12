@@ -1,1 +1,50 @@
-<p>shop-cart works!</p>
+<main class="container-fluid">
+<div class="container-fluid">
+  <p class="page-heading">MY CART</p>
+
+  <section class="container-fluid">
+
+    <div class="list-wrap" style="margin: 4em 0 3em 0;">
+      <div class="list-item d-flex">
+        <img src="https://storage.googleapis.com/wineshop-assets/wine-bottles/hukupapa.png">
+        <span class="mx-auto">Hukupapa</span>
+        <span class="mx-auto">$ 17.90</span>
+
+        <div class="input-group" style="width: 10%;">
+                <span class="input-group-btn">
+                    <button type="button" class="quantity-left-minus btn btn-number"  data-type="minus" data-field="">
+                      <span><fa-icon [icon]="minusIcon"></fa-icon></span>
+                    </button>
+                </span>
+
+          <input type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100" >
+
+          <span class="input-group-btn">
+                    <button type="button" class="quantity-right-plus btn btn-number" data-type="plus" data-field="">
+                        <span><fa-icon [icon]="plusIcon"></fa-icon></span>
+                    </button>
+                </span>
+
+        </div>
+
+        <fa-icon [icon]="trashIcon" class="ml-auto" style="color: darkred"></fa-icon></div>
+
+    </div>
+
+    <hr>
+
+      <div class="float-right">SUBTOTAL: <span style="margin-left: 4em;">$ 17.90</span></div><br><br>
+      <button class="btn btn-proceed float-right" routerLink="/checkout">PROCEED TO CHECKOUT</button>
+
+
+  </section>
+
+  <div class="footer">
+    <p>Copyright @ 2020 Cynthia Wainaina </p>
+  </div>
+
+
+
+
+</div>
+</main>

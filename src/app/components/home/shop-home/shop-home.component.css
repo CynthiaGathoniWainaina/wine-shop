@@ -57,3 +57,17 @@
   color: white;
   opacity: 90%;
 }
+
+.footer-home {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  padding: 20px 0 15px 0;
+  background-color: #165751;
+  opacity: 60%;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}

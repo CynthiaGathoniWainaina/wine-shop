@@ -1,0 +1,11 @@
+img {
+  width: 20px;
+  height: 100px;
+}
+
+.btn-payment {
+  background-color: #165751;
+  color: white;
+  border-radius: 0!important;
+  font-size: 15px;
+}

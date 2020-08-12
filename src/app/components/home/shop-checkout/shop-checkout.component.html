@@ -1,1 +1,114 @@
-<p>shop-checkout works!</p>
+<main class="container-fluid">
+
+<div class="container-fluid">
+  <p class="page-heading">Wine Shop Checkout</p>
+
+  <section class="container-fluid">
+
+    <div class="row" style="margin: 5em 0 8em 0; font-family: 'Avenir Next'">
+
+      <div class="col-xs-12 col-md-6 col-lg-6" style="background-color: #f9f9f9; height: 100%">
+        <p style="margin-top: 1em">ORDER SUMMARY</p>
+        <hr>
+        <div class="row">
+
+          <div class="col-xs-12 col-md-6 col-lg-4">
+          <img src="https://storage.googleapis.com/wineshop-assets/wine-bottles/hukupapa.png">
+          </div>
+
+          <div class="col-xs-12 col-md-6 col-lg-4">
+            <p>Hukupapa</p>
+          </div>
+
+          <div class="col-xs-12 col-md-6 col-lg-4">
+            <p class="float-right">2</p>
+          </div>
+        </div>
+
+        <hr>
+        <div>SUBTOTAL: <span class="float-right">$ 17.90</span></div>
+        <div>SHIPPING: <span class="float-right">Calculated at next step</span></div>
+        <hr>
+
+        <div>TOTAL: <span class="float-right" style="font-size: 30px">$ 17.90</span></div>
+
+
+      </div>
+
+      <div class="col-xs-12 col-md-6 col-lg-6">
+
+        <form class="form" style="width: 600px; ">
+
+          <div class="container">
+
+            <p>Contact Information</p>
+
+            <div class="form-group">
+              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                     placeholder="Your phone number"
+                     formControlName="phoneNumber"
+                     name="phone-number" required>
+            </div>
+
+            <div>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 2em;">
+              Keep me up to date on news and exclusive offers
+            </div>
+
+            <p>Shipping Address</p>
+
+
+            <div class="form-group">
+              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                     placeholder="Full name"
+                     formControlName="fullName"
+                     name="full-name" required>
+            </div>
+
+
+            <div class="form-group">
+              <input type="input" class="form-control"
+                     aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Address"
+                     formControlName="address"
+                     placeholder="Address" name="address" required>
+            </div>
+
+            <div class="form-group">
+              <input type="input" class="form-control"
+                     aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Address"
+                     formControlName="address"
+                     placeholder="Estate, Apartment, Suite etc" name="address" required>
+            </div>
+
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 2em">
+              Save this information for next time
+            </label>
+
+
+<!--   <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>-->
+
+            <div class="clearfix">
+              <button type="submit" class="btn btn-payment">Continue to Payment</button>
+            </div>
+
+
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+
+
+
+  </section>
+
+  <div class="footer">
+    <p>Copyright @ 2020 Cynthia Wainaina </p>
+  </div>
+
+
+</div>
+</main>

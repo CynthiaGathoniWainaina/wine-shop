@@ -35,8 +35,9 @@ main {
   height: 35px;
 }
 
-.nav-link:hover{
-  color: #165751;
+a:hover{
+  background-color: #165751;
+  cursor: pointer;
 }
 
 

@@ -7,7 +7,10 @@ html, body {
   overflow-x: hidden;
 }
 
-body { margin: 0; font-family: "Product Sans", "Product Sans"; }
+body {
+  margin: 0;
+  font-family: "Product Sans";
+}
 
 main {
   background-color: #ffffff;
@@ -18,16 +21,22 @@ main {
 }
 
 .footer {
-  position: relative;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  margin-top: 3em;
+  margin-top: auto;
   padding: 20px 0 15px 0;
   background-color: #165751;
   opacity: 60%;
   color: white;
   text-align: center;
   font-size: 14px;
+}
+
+.page-heading {
+  text-align: center;
+  font-size: 20px;
+  color: #165751;
 }
 
