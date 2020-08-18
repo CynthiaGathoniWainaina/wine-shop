@@ -2,8 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import {WineDataService} from '../../../shared/services/wine-data.service';
 import {NgxSpinnerService} from 'ngx-spinner';
-import {map} from 'rxjs/operators';
-import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-shop-home',
@@ -12,38 +11,31 @@ import {Observable} from 'rxjs';
 })
 export class ShopHomeComponent implements OnInit {
 
+  public WineData = [];
+  public imageUrl = 'https://storage.googleapis.com/wineshop-assets/wine-bottles/';
+
   constructor(
     private wineDataService: WineDataService,
-    private spinner: NgxSpinnerService
-
-  ) { }
-
-  public WineData = [];
-  // public WineBottle: any;
+    private spinner: NgxSpinnerService,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
+  this.spinner.show();
 
-
-    this.spinner.show();
-
-    this.wineDataService.getWineData().toPromise().then(data => {
-      this.WineData = data;
+  // Function to fetch wine data
+  this.wineDataService.getWineData().toPromise().then(data => {
+    this.WineData = data;
+    setTimeout(() => {
+        this.spinner.hide();
+      }, 2500);
     });
-
-    this.spinner.hide();
-
-
-
-    // this.wineDataService.getWineBottleImages('hukupapa.png').subscribe(base64data => {
-    //   console.log(base64data);
-    //   this.WineBottle = base64data;
-    // });
-
-
-
   }
 
-
+  // Function to show details of selected wine bottle
+  onSelect(product){
+    JSON.stringify(this.router.navigate(['/product-detail'], { queryParams: product}));
+  }
 
 
 }

@@ -7,11 +7,13 @@ import { HomeComponent } from './components/home/home.component';
 import {ShopHomeComponent} from './components/home/shop-home/shop-home.component';
 import {ShopCartComponent} from './components/home/shop-cart/shop-cart.component';
 import {ShopCheckoutComponent} from './components/home/shop-checkout/shop-checkout.component';
-import {ToastrModule} from "ngx-toastr";
-import {HttpClientModule} from "@angular/common/http";
+import {ToastrModule} from 'ngx-toastr';
+import {HttpClientModule} from '@angular/common/http';
 import { ProductDetailsComponent } from './components/home/product-details/product-details.component';
-import {NgxSpinnerModule} from "ngx-spinner";
-import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {NgxSpinnerModule} from 'ngx-spinner';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     NgxSpinnerModule,
@@ -33,6 +36,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
       positionClass: 'toast-bottom-right',
       preventDuplicates: false,
     }),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

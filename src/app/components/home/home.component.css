@@ -10,6 +10,17 @@ main {
   color: #212121;
 }
 
+.navbar-collapse {
+  background-color: #ffffff;
+  color: #165751;
+  text-align: right;
+}
+
+.navbar-brand {
+  color: #165751;
+  font-size: 25px;
+}
+
 .navbar-nav {
   margin-left: 30px;
 }
@@ -20,11 +31,6 @@ main {
   text-transform: uppercase;
 }
 
-.shop-logo {
-  font-size: 30px;
-  margin-left: 170px;
-  color: aquamarine;
-}
 
 .form-inline {
   width: 400px;
@@ -36,7 +42,7 @@ main {
 }
 
 a:hover{
-  background-color: #165751;
+  color: blue;
   cursor: pointer;
 }
 

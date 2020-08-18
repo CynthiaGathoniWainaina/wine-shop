@@ -1,13 +1,18 @@
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="selectedProduct">
   <section class="container-fluid">
 
+    <div class="row">
+      <span><fa-icon [icon]="backIcon" class="float-left"></fa-icon></span>
+      <span><button class="btn float-left" routerLink="/home" style="font-size: 18px">Back</button></span>
+    </div>
 
-    <div class="row" style="margin-top: 5em; margin-bottom: 7em">
+
+    <div class="row" style="margin-top: 5em; margin-bottom: 7em" >
 
       <div class="col-xs-12 col-md-6 col-lg-6">
 
         <div class="container" style="text-align: center">
-          <img src="https://storage.googleapis.com/wineshop-assets/wine-bottles/hukupapa.png">
+          <img [src]="imageUrl + selectedProduct.image">
         </div>
 
       </div>
@@ -16,48 +21,34 @@
 
         <div class="container-fluid" style="border: double; width: 80%; left: 0">
 
+          <div class="name-container">
+            <p>{{selectedProduct.name}}</p>
+          </div>
+
           <div class="price-container">
-            <p>$2.50</p>
+            <p>$ {{selectedProduct.cost.bottle}}</p>
           </div>
 
           <div class="options-container">
             <h6>OPTIONS</h6>
-            <button class="btn btn-choice">BOTTLE</button>
-            <button class="btn btn-choice">CASE (6 BOTTLES)</button>
-          </div>
 
-          <div class="quantity-container">
             <span>
-              <p>QUANTITY</p>
-
-              <div class="input-group" style="width: 30%;">
-                <span class="input-group-btn">
-                    <button type="button" class="quantity-left-minus btn btn-number"  data-type="minus" data-field="">
-                      <span><fa-icon [icon]="minusIcon"></fa-icon></span>
-                    </button>
-                </span>
-
-                <input type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100" >
-
-                <span class="input-group-btn">
-                    <button type="button" class="quantity-right-plus btn btn-number" data-type="plus" data-field="">
-                        <span><fa-icon [icon]="plusIcon"></fa-icon></span>
-                    </button>
-                </span>
-
-              </div>
-
+              <button (click)="enableDisableRule()"
+                      [ngClass]="{'btn btn-choice' : toggle, 'btn btn-choice-selected': !toggle}">BOTTLE</button>
             </span>
-
+            <span>
+              <button (click)="enableDisableRule()"
+                      [ngClass]="{'btn btn-choice' : toggle, 'btn btn-choice-selected': !toggle}">CASE (6 BOTTLES)</button>
+            </span>
           </div>
 
-            <button class="btn btn-to-cart">ADD TO CART +</button>
+            <button class="btn btn-to-cart" (click)="addProductToCart(selectedProduct)">ADD TO CART +</button>
 
             <button  class="btn btn-buy-now" routerLink="/checkout">BUY NOW</button>
 
           <hr>
           <div class="description-container">
-            <p>Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+            <p>{{selectedProduct.details}}</p>
           </div>
 
 
@@ -66,6 +57,7 @@
       </div>
     </div>
   </section>
+
 
   <div class="footer">
     <p>Copyright @ 2020 Cynthia Wainaina </p>

@@ -19,6 +19,13 @@
   border-radius: 0!important;
 }
 
+.btn-choice {
+  border: solid 1px #212121;
+  border-radius: 0!important;
+  margin-right: 1em;
+  font-size: 12px;
+}
+
 .btn-filter {
   border-color: #165751;
   margin: 0 10px 10px 0;
@@ -71,3 +78,14 @@
   text-align: center;
   font-size: 14px;
 }
+
+img {
+  width: 30%;
+  height: 30%;
+  margin: 20px 0 20px 0;
+}
+
+.row-select-options {
+  margin: 0 0 2em 0;
+}
+

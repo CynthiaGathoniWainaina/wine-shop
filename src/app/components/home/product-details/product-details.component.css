@@ -1,3 +1,10 @@
+.name-container {
+  font-family: "Avenir Next";
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
 .price-container {
   background-color: #f9f9f9;
   padding: 10px 0 5px 10px;
@@ -28,6 +35,15 @@ input[type=text] {
   margin-right: 1em;
   font-size: 15px;
 }
+
+.btn-choice-selected {
+  background-color: #212121;
+  color: white;
+  border-radius: 0!important;
+  margin-right: 1em;
+  font-size: 15px;
+}
+
 
 .btn-to-cart {
   margin-top: 2em;
