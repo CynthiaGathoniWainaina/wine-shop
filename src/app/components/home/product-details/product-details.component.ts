@@ -45,6 +45,7 @@ export class ProductDetailsComponent implements OnInit {
 
   }
 
+  // Function to receive selected product from homepage
   getSelectedProduct(): void {
     this.route.queryParams.subscribe(params => {
       this.selectedProduct = params;
