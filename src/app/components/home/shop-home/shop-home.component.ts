@@ -12,6 +12,7 @@ import {Router} from '@angular/router';
 export class ShopHomeComponent implements OnInit {
 
   public WineData = [];
+  public VintageWine = [];
   public imageUrl = 'https://storage.googleapis.com/wineshop-assets/wine-bottles/';
 
   constructor(
@@ -28,13 +29,17 @@ export class ShopHomeComponent implements OnInit {
     this.WineData = data;
     setTimeout(() => {
         this.spinner.hide();
-      }, 2500);
+      }, 1000);
     });
   }
 
   // Function to show details of selected wine bottle
   onSelect(product){
-    JSON.stringify(this.router.navigate(['/product-detail'], { queryParams: product}));
+    this.router.navigate(['/product-details'], { queryParams: product});
+  }
+
+  vintageWineFilter(){
+    this.VintageWine = this.WineData.filter(item => item.type === 'vintage');
   }
 
 

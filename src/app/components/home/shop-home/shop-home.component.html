@@ -12,13 +12,13 @@
         <div class="col-md-10" style="margin-top: 20%">
 
           <!-- Heading -->
-          <h2 class="display-4 font-weight-medium white-text pt-4 mb-5 mt-5">Welcome to Wine Shop</h2>
+          <h1 class="display-4 font-weight-medium pt-4 mb-5 mt-5 mask-title">Welcome to Wine &nbsp; Shop</h1>
 
           <!-- Divider -->
           <hr class="hr-light">
 
           <!-- Description -->
-          <h4 class="white-text my-4">Your best wine collection</h4>
+          <h2 class="white-text my-4">Your best wine collection</h2>
 
           <button type="button" class="btn btn-submit">SHOP NOW<i class="fa fa-book ml-2"></i></button>
 
@@ -42,27 +42,27 @@
 
       <div class="container-fluid" style="margin-bottom: 2em">
 
-        <h6>CATALOG</h6>
+        <h4>CATALOG</h4>
         <p class="filter-item">Everything</p>
-<!--        <p class="filter-item" *ngFor="let product of WineData | filter: { tags: 'vintage'} ">Vintage Wines</p>-->
+        <p class="filter-item" (click)="vintageWineFilter()">Vintage Wines</p>
 
       </div>
 
-      <div class="container-fluid" style="margin-bottom: 2em">
-        <h6>SELECT OPTIONS</h6>
-        <p class="filter-item">Buy by Bottle</p>
-        <p class="filter-item">Buy by Case (6 Bottles)</p>
-      </div>
+<!--      <div class="container-fluid" style="margin-bottom: 2em">-->
+<!--        <h6>SELECT OPTIONS</h6>-->
+<!--        <p class="filter-item">Buy by Bottle</p>-->
+<!--        <p class="filter-item">Buy by Case (6 Bottles)</p>-->
+<!--      </div>-->
 
       <div class="container-fluid" style="margin-bottom: 2em">
-        <h6>ORDER BY</h6>
+        <h4>ORDER BY</h4>
         <p class="filter-item">Price, low to high</p>
         <p class="filter-item">Price, high to low</p>
       </div>
 
       <div class="container-fluid" style="margin-bottom: 2em">
 
-        <h6>WINE TYPE</h6>
+        <h4>WINE TYPE</h4>
         <button class="btn btn-filter">Red Wine</button>
         <button class="btn btn-filter">White Wine</button>
         <button class="btn btn-filter">Sparkling</button>

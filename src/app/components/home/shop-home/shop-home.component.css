@@ -9,6 +9,14 @@
   -o-background-size: cover;
   background-size: cover;
   margin-bottom: 2%;
+  font-size: 30px;
+}
+
+.mask-title {
+  font-size: 60px;
+  font-family: "Product Sans";
+  /*white-space: pre-wrap;*/
+  line-height: 100%;
 }
 
 .btn-submit {
@@ -32,15 +40,12 @@
   cursor: pointer;
   font-size: 15px;
   color: #165751;
-  opacity: 80%;
 
 }
 
 .filter-item {
   cursor: pointer;
   font-size: 15px;
-  opacity: 60%;
-
 }
 
 .card-text {
@@ -62,7 +67,7 @@
 .btn-add-to-cart:hover{
   background-color: #165751;
   color: white;
-  opacity: 90%;
+  /*opacity: 90%;*/
 }
 
 .footer-home {
@@ -73,7 +78,7 @@
   margin-top: auto;
   padding: 20px 0 15px 0;
   background-color: #165751;
-  opacity: 60%;
+  /*opacity: 90%;*/
   color: white;
   text-align: center;
   font-size: 14px;

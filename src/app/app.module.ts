@@ -14,6 +14,8 @@ import {NgxSpinnerModule} from 'ngx-spinner';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ShopSummaryComponent } from './components/home/shop-summary/shop-summary.component';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ShopCartComponent,
     ShopCheckoutComponent,
     HomeComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ShopSummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       preventDuplicates: false,
     }),
     NgbModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

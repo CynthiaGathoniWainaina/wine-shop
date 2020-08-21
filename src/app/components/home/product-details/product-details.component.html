@@ -1,3 +1,5 @@
+<ngx-spinner></ngx-spinner>
+
 <div class="container-fluid" *ngIf="selectedProduct">
   <section class="container-fluid">
 
@@ -19,30 +21,37 @@
 
       <div class="col-xs-12 col-md-6 col-lg-6">
 
-        <div class="container-fluid" style="border: double; width: 80%; left: 0">
+        <div class="container-fluid" style="border: double; width: 100%; left: 0">
 
           <div class="name-container">
             <p>{{selectedProduct.name}}</p>
           </div>
-
-          <div class="price-container">
-            <p>$ {{selectedProduct.cost.bottle}}</p>
-          </div>
+          <hr>
 
           <div class="options-container">
-            <h6>OPTIONS</h6>
+            <h4>OPTIONS</h4>
 
-            <span>
-              <button (click)="enableDisableRule()"
-                      [ngClass]="{'btn btn-choice' : toggle, 'btn btn-choice-selected': !toggle}">BOTTLE</button>
-            </span>
-            <span>
-              <button (click)="enableDisableRule()"
-                      [ngClass]="{'btn btn-choice' : toggle, 'btn btn-choice-selected': !toggle}">CASE (6 BOTTLES)</button>
-            </span>
+            <mat-button-toggle-group #group="matButtonToggleGroup" style="margin-bottom: 2em">
+
+              <mat-button-toggle value="17.90">
+                <p>BOTTLE</p>
+              </mat-button-toggle>
+
+              <mat-button-toggle value="249.0">
+                <p>CASE (6 BOTTLES)</p>
+              </mat-button-toggle>
+
+            </mat-button-toggle-group>
+
+<!--            <div class="example-selected-value">Selected value: {{group.value}}</div>-->
+
+            <div class="price-container">
+              <p>$ {{group.value}}</p>
+            </div>
+
           </div>
 
-            <button class="btn btn-to-cart" (click)="addProductToCart(selectedProduct)">ADD TO CART +</button>
+          <button class="btn btn-to-cart" (click)="addProductToCart(selectedProduct)">ADD TO CART +</button>
 
             <button  class="btn btn-buy-now" routerLink="/checkout">BUY NOW</button>
 
@@ -59,7 +68,7 @@
   </section>
 
 
-  <div class="footer">
+  <div class="container-fluid footer">
     <p>Copyright @ 2020 Cynthia Wainaina </p>
   </div>
 

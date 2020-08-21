@@ -2,31 +2,31 @@
 <div class="container-fluid">
   <p class="page-heading">MY CART</p>
 
-  <section class="container-fluid" *ngFor="let product of cartProductList">
+  <section class="container-fluid" style="margin-bottom: 15em">
 
-    <div class="list-wrap" style="margin: 4em 0 3em 0;">
+    <div class="list-wrap" style="margin: 4em 0 5em 0;">
       <div class="list-item d-flex">
 
-        <div class="row" style="width: 100%">
-          <div class="col-xs-12 col-md-12 col-lg-2" style="width: 500px">
+        <div class="row justify-content-md-center" style="width: 100%; left: 50%; font-size: 16px">
+          <div class="col-xs-12 col-md-12 col-lg-2">
             <img src="https://storage.googleapis.com/wineshop-assets/wine-bottles/hukupapa.png">
           </div>
-          <div class="col-xs-12 col-md-12 col-lg-2" style="width: 500px">
-            <p>{{product.name}}</p>
+          <div class="col-xs-12 col-md-12 col-lg-2" >
+            <p>Hukupapa</p>
           </div>
 
-          <div class="col-xs-12 col-md-12 col-lg-2" style="width: 500px">
-            <p>{{product.cost.bottle}}</p>
+          <div class="col-xs-12 col-md-12 col-lg-2">
+            <p>$ 17.90</p>
           </div>
 
-          <div class="col-xs-12 col-md-12 col-lg-2" style="width: 500px">
+          <div class="col-xs-12 col-md-12 col-lg-2">
 
             <button class="btn btn-quantity">-</button>
              1
             <button class="btn btn-quantity">+</button>
           </div>
 
-          <div class="col-xs-12 col-md-12 col-lg-2" style="width: 500px">
+          <div class="col-xs-12 col-md-12 col-lg-2">
             <fa-icon [icon]="trashIcon" class="ml-auto" style="color: darkred"></fa-icon>
           </div>
 
@@ -46,7 +46,7 @@
 
   </section>
 
-  <div class="footer">
+  <div class="container-fluid footer">
     <p>Copyright @ 2020 Cynthia Wainaina </p>
   </div>
 

@@ -20,6 +20,7 @@ export class ProductDetailsComponent implements OnInit {
   status = 'Enable';
 
 
+  public selectedProductNo: any;
   public selectedProduct: any;
   public product: any;
   public imageUrl = 'https://storage.googleapis.com/wineshop-assets/wine-bottles/';
@@ -37,6 +38,7 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.spinner.show();
     this.getSelectedProduct();
     this.cart.currentProducts
       .subscribe(products => this.cartList = products);
@@ -46,7 +48,10 @@ export class ProductDetailsComponent implements OnInit {
   getSelectedProduct(): void {
     this.route.queryParams.subscribe(params => {
       this.selectedProduct = params;
-      // console.log(JSON.parse(this.selectedProduct));
+      setTimeout(() => {
+        this.spinner.hide();
+      }, 1000);
+      console.log(this.selectedProduct);
     });
   }
 

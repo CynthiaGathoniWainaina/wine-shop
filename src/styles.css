@@ -5,6 +5,7 @@ html, body {
   height: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  font-family: "Product Sans";
 }
 
 body {
@@ -21,14 +22,14 @@ main {
 }
 
 .footer {
-  position: absolute;
+  /*position: fixed;*/
   left: 0;
   bottom: 0;
   width: 100%;
   margin-top: auto;
   padding: 20px 0 15px 0;
   background-color: #165751;
-  opacity: 60%;
+  /*opacity: 60%;*/
   color: white;
   text-align: center;
   font-size: 14px;
@@ -39,4 +40,11 @@ main {
   font-size: 20px;
   color: #165751;
 }
+
+@media (max-width: 767px) {
+  .col-xs-12 {
+    margin-bottom: 2em;
+  }
+}
+
 

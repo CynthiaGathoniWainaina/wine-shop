@@ -8,6 +8,8 @@ main {
   height: 90px;
   background-color: #ffffff;
   color: #212121;
+  font-family: "Product Sans";
+  font-size: 16px;
 }
 
 .navbar-collapse {
@@ -27,7 +29,6 @@ main {
 
 .nav-item {
   margin-right: 20px;
-  opacity: 70%;
   text-transform: uppercase;
 }
 
